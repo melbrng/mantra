@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MantraViewController: UIViewController {
 
+    var audioPlayer: AVAudioPlayer!
 
     @IBOutlet weak var mantraImageView: UIImageView!
     @IBOutlet weak var mantraTextField: UITextField!
+
+    @IBAction func playMantra(_ sender: Any) {
+        playAudio()
+    }
+    
     @IBAction func dismissView(_ sender: Any) {
        dismiss(animated: true, completion: nil)
     }
@@ -29,17 +36,22 @@ class MantraViewController: UIViewController {
         mantraTextField.text = mantraText
         mantraImageView.image = mantraImage
         
-        // Do any additional setup after loading the view.
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func playAudio(){
+        if let soundURL = Bundle.main.url(forResource: "tapestry", withExtension: "mp3") {
+            
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+            }
+            catch {
+                print(error)
+            }
+            
+            audioPlayer.play()
+            
+        }else{
+            print("Unable to locate audio file")
+        }
     }
-    */
-
 }

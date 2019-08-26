@@ -15,29 +15,19 @@ class CalendarViewController: UIViewController {
     
     let calendarStartDate = Date("2019-01-01")
     let calendarEndDate = Date("2019-12-31")
-    
-    
-    
+
     override func viewDidLoad() {
-      //  super.viewDidLoad()
-      //  initialSetup()
-     //
-       
-
-
 
     }
     
     override func viewDidAppear(_ animated: Bool) {
-           self.calendarView.delegate = self
-               calendarView.setUpCalendar(startDate: calendarStartDate, endDate: calendarEndDate, weekStartDay: .sunday, shouldSelectPastDays: true, sholudAllowMultipleSelection: true)
+        self.calendarView.delegate = self
+        calendarView.setUpCalendar(startDate: calendarStartDate, endDate: calendarEndDate, weekStartDay: .sunday, shouldSelectPastDays: true, sholudAllowMultipleSelection: true)
     }
     
-//    fileprivate func initialSetup() {
-//        self.calendarView.delegate = self
-//
-//    }
-    
+    func calendarCustomization() {
+        
+    }
 
 }
 

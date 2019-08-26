@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4375B7E4231334FD00F118D6 /* MantraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4375B7E3231334FD00F118D6 /* MantraViewController.swift */; };
 		4375B806231479EA00F118D6 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4375B805231479EA00F118D6 /* CalendarViewController.swift */; };
+		4375B80823148E7500F118D6 /* tapestry.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4375B80723148E7500F118D6 /* tapestry.mp3 */; };
 		43AB56C8230B7EBA00591258 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AB56C7230B7EBA00591258 /* AppDelegate.swift */; };
 		43AB56CD230B7EBA00591258 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43AB56CB230B7EBA00591258 /* Main.storyboard */; };
 		43AB56CF230B7EBB00591258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43AB56CE230B7EBB00591258 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		4375B7E3231334FD00F118D6 /* MantraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MantraViewController.swift; sourceTree = "<group>"; };
 		4375B805231479EA00F118D6 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		4375B80723148E7500F118D6 /* tapestry.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tapestry.mp3; path = "../../../../../Users/melissaboring/Music/iTunes/iTunes Media/Music/James Hood/Mesmerica/tapestry.mp3"; sourceTree = "<group>"; };
 		43AB56C4230B7EBA00591258 /* Mantra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mantra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43AB56C7230B7EBA00591258 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43AB56CC230B7EBA00591258 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				43AB56CE230B7EBB00591258 /* Assets.xcassets */,
 				43AB56D0230B7EBB00591258 /* LaunchScreen.storyboard */,
 				43AB56D3230B7EBB00591258 /* Info.plist */,
+				4375B80723148E7500F118D6 /* tapestry.mp3 */,
 			);
 			path = Mantra;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4375B80823148E7500F118D6 /* tapestry.mp3 in Resources */,
 				43AB56D2230B7EBB00591258 /* LaunchScreen.storyboard in Resources */,
 				43AB56CF230B7EBB00591258 /* Assets.xcassets in Resources */,
 				43AB56CD230B7EBA00591258 /* Main.storyboard in Resources */,
