@@ -1,0 +1,6 @@
+framework module SSCalendarControl {
+  umbrella header "SSCalendarControl-umbrella.h"
+
+  export *
+  module * { export * }
+}

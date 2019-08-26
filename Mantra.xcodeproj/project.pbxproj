@@ -3,19 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4375B7E4231334FD00F118D6 /* MantraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4375B7E3231334FD00F118D6 /* MantraViewController.swift */; };
+		4375B806231479EA00F118D6 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4375B805231479EA00F118D6 /* CalendarViewController.swift */; };
 		43AB56C8230B7EBA00591258 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AB56C7230B7EBA00591258 /* AppDelegate.swift */; };
 		43AB56CD230B7EBA00591258 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43AB56CB230B7EBA00591258 /* Main.storyboard */; };
 		43AB56CF230B7EBB00591258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43AB56CE230B7EBB00591258 /* Assets.xcassets */; };
 		43AB56D2230B7EBB00591258 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43AB56D0230B7EBB00591258 /* LaunchScreen.storyboard */; };
 		43C81793230C896700A8342C /* CustomMantraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C81791230C896700A8342C /* CustomMantraCell.swift */; };
 		43C81796230C962C00A8342C /* MantraTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C81795230C962C00A8342C /* MantraTableViewController.swift */; };
+		F394C3A81439DC56E750A5D0 /* Pods_Mantra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB42FE2D826E474423F07098 /* Pods_Mantra.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4375B7E3231334FD00F118D6 /* MantraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MantraViewController.swift; sourceTree = "<group>"; };
+		4375B805231479EA00F118D6 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		43AB56C4230B7EBA00591258 /* Mantra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mantra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43AB56C7230B7EBA00591258 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43AB56CC230B7EBA00591258 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		43AB56D3230B7EBB00591258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43C81791230C896700A8342C /* CustomMantraCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMantraCell.swift; sourceTree = "<group>"; };
 		43C81795230C962C00A8342C /* MantraTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MantraTableViewController.swift; sourceTree = "<group>"; };
+		5D052981E69205657F993DCD /* Pods-Mantra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mantra.release.xcconfig"; path = "Target Support Files/Pods-Mantra/Pods-Mantra.release.xcconfig"; sourceTree = "<group>"; };
+		65BEF257E163F8C950338637 /* Pods-Mantra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mantra.debug.xcconfig"; path = "Target Support Files/Pods-Mantra/Pods-Mantra.debug.xcconfig"; sourceTree = "<group>"; };
+		BB42FE2D826E474423F07098 /* Pods_Mantra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mantra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F394C3A81439DC56E750A5D0 /* Pods_Mantra.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		343BD29333209179D0B829EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB42FE2D826E474423F07098 /* Pods_Mantra.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		43AB56BB230B7EBA00591258 = {
 			isa = PBXGroup;
 			children = (
 				43AB56C6230B7EBA00591258 /* Mantra */,
 				43AB56C5230B7EBA00591258 /* Products */,
+				CFDF23C7544F471AC12BA93F /* Pods */,
+				343BD29333209179D0B829EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +106,8 @@
 			children = (
 				43AB56C7230B7EBA00591258 /* AppDelegate.swift */,
 				43C81795230C962C00A8342C /* MantraTableViewController.swift */,
+				4375B7E3231334FD00F118D6 /* MantraViewController.swift */,
+				4375B805231479EA00F118D6 /* CalendarViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -99,6 +120,15 @@
 			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
+		CFDF23C7544F471AC12BA93F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				65BEF257E163F8C950338637 /* Pods-Mantra.debug.xcconfig */,
+				5D052981E69205657F993DCD /* Pods-Mantra.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43AB56D6230B7EBB00591258 /* Build configuration list for PBXNativeTarget "Mantra" */;
 			buildPhases = (
+				DE861226AAE7889A3117EE07 /* [CP] Check Pods Manifest.lock */,
 				43AB56C0230B7EBA00591258 /* Sources */,
 				43AB56C1230B7EBA00591258 /* Frameworks */,
 				43AB56C2230B7EBA00591258 /* Resources */,
+				F2626154E22EE811509774C6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,14 +197,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DE861226AAE7889A3117EE07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mantra-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2626154E22EE811509774C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mantra/Pods-Mantra-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mantra/Pods-Mantra-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mantra/Pods-Mantra-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		43AB56C0230B7EBA00591258 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4375B806231479EA00F118D6 /* CalendarViewController.swift in Sources */,
 				43C81796230C962C00A8342C /* MantraTableViewController.swift in Sources */,
 				43C81793230C896700A8342C /* CustomMantraCell.swift in Sources */,
 				43AB56C8230B7EBA00591258 /* AppDelegate.swift in Sources */,
+				4375B7E4231334FD00F118D6 /* MantraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,11 +392,13 @@
 		};
 		43AB56D7230B7EBB00591258 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65BEF257E163F8C950338637 /* Pods-Mantra.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WFBXYH99LH;
 				INFOPLIST_FILE = Mantra/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,11 +412,13 @@
 		};
 		43AB56D8230B7EBB00591258 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D052981E69205657F993DCD /* Pods-Mantra.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WFBXYH99LH;
 				INFOPLIST_FILE = Mantra/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
