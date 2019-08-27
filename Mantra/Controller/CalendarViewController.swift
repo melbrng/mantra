@@ -10,44 +10,74 @@ import UIKit
 import SSCalendarControl
 
 class CalendarViewController: UIViewController {
-    
-    @IBOutlet weak var calendarView: SSCalendarView!
-    
-    let calendarStartDate = Date("2019-01-01")
-    let calendarEndDate = Date("2019-12-31")
 
-    override func viewDidLoad() {
 
+    @IBOutlet weak var startDatePicker: UIDatePicker!
+    @IBOutlet weak var endDatePicker: UIDatePicker!
+    @IBOutlet weak var timePeriodSegmentControl: UISegmentedControl!
+    @IBOutlet weak var dateTimeLabel: UILabel!
+    @IBOutlet weak var endDateTimeLabel: UILabel!
+    
+    @IBAction func startDatePickerChanged(_ sender: Any) {
+        setTimeInterval()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        self.calendarView.delegate = self
-        calendarView.setUpCalendar(startDate: calendarStartDate, endDate: calendarEndDate, weekStartDay: .sunday, shouldSelectPastDays: true, sholudAllowMultipleSelection: true)
-    }
-    
-    func calendarCustomization() {
+    @IBAction func endDatePickerChanged(_ sender: Any) {
         
     }
-
-}
-
-extension Date {
-    init(_ dateString:String) {
-        let dateStringFormatter = DateFormatter()
-        dateStringFormatter.dateFormat = "yyyy-MM-dd"
-        dateStringFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale
-        let date = dateStringFormatter.date(from: dateString)!
-        self.init(timeInterval:0, since:date)
-    }
-}
-
-extension CalendarViewController: SSCalendarDeleagte {
     
-    func dateSelected(_ date: Date) {
-        print("selected: \(date)")
+    @IBAction func intervalPickerChanged(_ sender: Any) {
+        setTimeInterval()
     }
     
-    func dateDeSelected(_ date: Date) {
-        print("deSelected: \(date)")
+    // TODO: implement NSCoding to save user's preferences
+    @IBAction func saveScheduleForMantra(_ sender: Any) {
+       
     }
+    
+    //Dismiss the view and navigate back to Mantra VC
+    @IBAction func dismissView(_ sender: Any) {
+         dismiss(animated: true, completion: nil)
+    }
+    
+
+    override func viewDidLoad() {
+        setTimeInterval()
+    }
+
+    //switch between 40, 80 120 days or select a custom interval
+    func setTimeInterval() {
+        
+        var timeInterval : Double
+        //40 days in seconds
+        let fortyDaysInSeconds = Double(3456000)
+
+        switch timePeriodSegmentControl.selectedSegmentIndex {
+        case 0:
+            timeInterval = fortyDaysInSeconds
+        case 1:
+            timeInterval = fortyDaysInSeconds
+        case 2:
+            timeInterval = (fortyDaysInSeconds * 3.0)
+        case 3:
+            timeInterval = 0.0
+        default:
+            timeInterval = fortyDaysInSeconds
+        }
+        
+        dateTimeLabel.text = formatDateTime(dateToFormat: startDatePicker.date)
+        endDatePicker.date = startDatePicker.date.addingTimeInterval(timeInterval)
+        endDateTimeLabel.text = formatDateTime(dateToFormat: endDatePicker.date)
+    }
+    
+    func formatDateTime(dateToFormat: Date) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        let strDateTime = dateFormatter.string(from: dateToFormat)
+        return strDateTime
+    }
+
+
 }
+

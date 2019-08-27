@@ -9,8 +9,8 @@
 import UIKit
 
 class MantraTableViewController: UITableViewController {
-    var images = ["image1","image2","image3","image4","image5","image6","image7","image8","image9","image10"]
-    var mantras = ["Hung Vajra Peh","Sat Patim Dehi","jdksalfjldsk","jdksalfjldsk","jdksalfjldsk","jdksalfjldsk","jdksalfjldsk","jdksalfjldsk","jdksalfjldsk","jdksalfjldsk"]
+    var images = ["image1","image2"]
+    var mantras = ["Hung Vajra Peh","Sat Patim Dehi"]
     let mantraDetailSegue = "ShowMantraDetail"
     
     @IBOutlet var mantraTableView: UITableView!
@@ -35,7 +35,7 @@ class MantraTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->
      UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "customMantraCell") as! CustomMantraCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customMantraCell") as! CustomMantraCell
         cell.mantraImageView.image = UIImage(named: images[indexPath.row])
         cell.mantraLabel.text = mantras[indexPath.row]
         return cell
@@ -54,29 +54,17 @@ class MantraTableViewController: UITableViewController {
     }
     
     //Segue Navigation
-    override func prepare(for segue: UIStoryboardSegue!, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == mantraDetailSegue {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destination = segue.destination as! MantraViewController
-                print(images[indexPath.row])
-print(mantras[indexPath.row])
                 destination.mantraImage = UIImage(named:images[indexPath.row])!
-               destination.mantraText = mantras[indexPath.row]
+                destination.mantraText = mantras[indexPath.row]
             }
 
         }
     }
 }
-
-
-//if let indexPath = tableView.indexPathForSelectedRow {
-//    let object = objects[indexPath.row] as! NSDate
-//    let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-//    controller.detailItem = object
-//    controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-//    controller.navigationItem.leftItemsSupplementBackButton = true
-//}
-
 
 //Get the image ratio
 extension UIImage {

@@ -35,10 +35,12 @@ class MantraViewController: UIViewController {
         super.viewDidLoad()
         mantraTextField.text = mantraText
         mantraImageView.image = mantraImage
+        loadAudio()
         
     }
     
-    func playAudio(){
+    //Audio
+    func loadAudio(){
         if let soundURL = Bundle.main.url(forResource: "tapestry", withExtension: "mp3") {
             
             do {
@@ -47,11 +49,19 @@ class MantraViewController: UIViewController {
             catch {
                 print(error)
             }
-            
-            audioPlayer.play()
-            
-        }else{
+        } else {
             print("Unable to locate audio file")
         }
+    }
+    
+    func playAudio(){
+      if(audioPlayer.isPlaying){
+        print("stop")
+        audioPlayer.stop()
+      } else {
+        print("playing")
+       audioPlayer.play()
+      }
+
     }
 }
